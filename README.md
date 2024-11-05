@@ -1,4 +1,5 @@
 # aidevs3
+**You run this program at your own risk**
 
 To install dependencies:
 
@@ -8,8 +9,8 @@ bun install
 
 To run:
 
-```bash
-bun run index.ts
-```
+In `index.ts` import the appropriate `run()` method from `tasks/task_name/index.ts` and run script
 
-This project was created using `bun init` in bun v1.1.27. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+```bash
+bun start
+```

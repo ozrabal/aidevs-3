@@ -1,6 +1,7 @@
 {
   "name": "aidevs3",
   "version": "1.0.0",
+  "author": "webkowski.com",
   "module": "index.ts",
   "type": "module",
   "scripts": {
@@ -11,5 +12,9 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.72",
+    "ai": "^3.4.33"
   }
 }
