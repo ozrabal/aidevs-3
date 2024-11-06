@@ -1,4 +1,4 @@
-export async function sendAnswer(task: string, answer: unknown) {
+export async function sendAnswer(task: string, answer: unknown, apiUrl?: string) {
   console.log(`Sending answer to task ${task}: ${answer}`);
   try {
     const body = JSON.stringify({
@@ -7,7 +7,8 @@ export async function sendAnswer(task: string, answer: unknown) {
       answer,
     });
 
-    const response = await fetch(`${process.env.AIDEVS_API_URL!}/verify`, {
+    const url = apiUrl || `${process.env.AIDEVS_API_URL!}/verify`;
+    const response = await fetch(url, {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
